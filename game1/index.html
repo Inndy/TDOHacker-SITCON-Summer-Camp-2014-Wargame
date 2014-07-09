@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="normalize.css" media="all" />
+	<style type="text/css">
+		html {
+            background-color: #444;
+		}
+        
+		body {
+            background-color: #DDD;
+            box-shadow: 0 0 6px #000;
+            color: #222;
+            text-shadow: 0 0 1px #AAA;
+			font-family: Helvetica, Arial, sans-serif;
+			margin: 80px auto;
+			max-width: 960px;
+            padding: 20px;
+		}
+        
+        q {
+            display: block;
+            padding: 18px;
+            margin: 30px auto;
+            font-size: 1.1em;
+            background: #CCC;
+        }
+        
+        .big {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        
+        .hide_the_password {
+            display: none;
+        }
+        
+        #win {
+            display: none;
+        }
+	</style>
+</head>
+<body>
+	<h1>TDOHacker Wargame 1</h1>
+	<hr />
+	<q>What is password?</q>
+    <div class="big" id="game">
+        <label for="password">Password: <input type="password" id="password"></label>
+    </div>
+    <div class="big" id="win">
+        <h1>You Got It.</h1>
+    </div>
+    <span class="hide_the_password" id="input_this">#IMHacker!</span>
+    <script>
+        password.onchange = function (e) {
+            if (this.value == input_this.textContent) {
+                game.style.display = "none";
+                win.style.display = "block";
+            }
+        };
+    </script>
+</body>
+</html>
