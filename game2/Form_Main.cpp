@@ -19,7 +19,7 @@ __fastcall TFormMain::TFormMain(TComponent* Owner)
 void __fastcall TFormMain::Attack(AttackType type)
 {
 	AttackType rnd = (AttackType)((rand() >> 2) % 3);
-	String StrType[] = { L"¥¬", L"°Å¤M", L"¥ÛÀY" };
+	String StrType[] = { L"å¸ƒ", L"å‰ªåˆ€", L"çŸ³é ­" };
 	Label2->Text = StrType[rnd];
 
 	if (rnd == type)
@@ -61,20 +61,20 @@ void __fastcall TFormMain::Timer1Timer(TObject *Sender)
 		if (ScoreA > ScoreB)
 		{
 			if (ScoreB == 0) {
-				ShowMessage(L"¦n§a§Ú©Ó»{§A¬O­ÓÀb«È...");
+				ShowMessage(L"å¥½å§æˆ‘æ‰¿èªä½ æ˜¯å€‹é§­å®¢...");
 			}
 			else
 			{
-				ShowMessage(L"§AÄ¹¤F¡A¦ı¬O¨S¦³§¹³Ó :P");
+				ShowMessage(L"ä½ è´äº†ï¼Œä½†æ˜¯æ²’æœ‰å®Œå‹ :P");
 			}
 		}
 		else if (ScoreA == ScoreB)
 		{
-			ShowMessage(L"¥­¤â³á¡A¹B®ğ¤£¤Ó¦nªº¼Ë¤l¡]¡H¡^");
+			ShowMessage(L"å¹³æ‰‹å–”ï¼Œé‹æ°£ä¸å¤ªå¥½çš„æ¨£å­ï¼ˆï¼Ÿï¼‰");
 		}
 		else
 		{
-			ShowMessage(L"°Ú«¢«¢«¢«¢«¢§A¬İ¬İ§A¿é¤F");
+			ShowMessage(L"å•Šå“ˆå“ˆå“ˆå“ˆå“ˆä½ çœ‹çœ‹ä½ è¼¸äº†");
 		}
 	}
 }
