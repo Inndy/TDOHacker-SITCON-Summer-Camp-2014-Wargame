@@ -18,7 +18,7 @@ __fastcall TFormMain::TFormMain(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TFormMain::Attack(AttackType type)
 {
-	AttackType rnd = (rand() >> 2) % 3;
+	AttackType rnd = (AttackType)((rand() >> 2) % 3);
 	String StrType[] = { L"¥¬", L"°Å¤M", L"¥ÛÀY" };
 	Label2->Text = StrType[rnd];
 
