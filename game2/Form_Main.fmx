@@ -12,7 +12,7 @@ object FormMain: TFormMain
     Width = 80.000000000000000000
     Height = 80.000000000000000000
     OnClick = Button1Click
-    TabOrder = 9
+    TabOrder = 0
     Text = #21098#20992
   end
   object Button2: TButton
@@ -21,7 +21,7 @@ object FormMain: TFormMain
     Width = 80.000000000000000000
     Height = 80.000000000000000000
     OnClick = Button2Click
-    TabOrder = 10
+    TabOrder = 1
     Text = #30707#38957
   end
   object Button3: TButton
@@ -30,7 +30,7 @@ object FormMain: TFormMain
     Width = 80.000000000000000000
     Height = 80.000000000000000000
     OnClick = Button3Click
-    TabOrder = 11
+    TabOrder = 2
     Text = #24067
   end
   object Button4: TButton
@@ -38,14 +38,14 @@ object FormMain: TFormMain
     Width = 80.000000000000000000
     Height = 80.000000000000000000
     OnClick = Button4Click
-    TabOrder = 12
+    TabOrder = 3
     Text = 'Reset'
   end
   object Label1: TLabel
     Position.Point = '(16,112)'
     Width = 81.000000000000000000
     Height = 33.000000000000000000
-    TabOrder = 13
+    TabOrder = 4
     Font.Size = 20.000000000000000000
     Text = '0 - 0'
   end
@@ -53,11 +53,12 @@ object FormMain: TFormMain
     Position.Point = '(136,112)'
     Width = 41.000000000000000000
     Height = 15.000000000000000000
-    TabOrder = 16
+    TabOrder = 5
     Font.Size = 16.000000000000000000
     Text = '----'
   end
   object Timer1: TTimer
+    Enabled = False
     Interval = 100
     OnTimer = Timer1Timer
     Left = 336

@@ -48,11 +48,35 @@ void __fastcall TFormMain::Button4Click(TObject *Sender)
 {
 	this->SwitchButtonState(true);
 	ScoreA = ScoreB = 0;
+	Timer1->Enabled = true;
 }
 //---------------------------------------------------------------------------
 void __fastcall TFormMain::Timer1Timer(TObject *Sender)
 {
 	Label1->Text = new String()->sprintf(L"%d - %d", ScoreA, ScoreB);
+	if (ScoreA + ScoreB > 10)
+	{
+		Timer1->Enabled = false;
+		this->SwitchButtonState(false);
+		if (ScoreA > ScoreB)
+		{
+			if (ScoreB == 0) {
+				ShowMessage(L"好吧我承認你是個駭客...");
+			}
+			else
+			{
+				ShowMessage(L"你贏了，但是沒有完勝 :P");
+			}
+		}
+		else if (ScoreA == ScoreB)
+		{
+			ShowMessage(L"平手喔，運氣不太好的樣子（？）");
+		}
+		else
+		{
+			ShowMessage(L"啊哈哈哈哈哈你看看你輸了");
+		}
+	}
 }
 //---------------------------------------------------------------------------
 void __fastcall TFormMain::Button1Click(TObject *Sender)
