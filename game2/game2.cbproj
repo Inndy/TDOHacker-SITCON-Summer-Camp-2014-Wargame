@@ -34,6 +34,12 @@
 			<CfgParent>Base</CfgParent>
 			<Base>true</Base>
 		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
 			<_TCHARMapping>wchar_t</_TCHARMapping>
 			<ProjectType>FmxGuiApplication</ProjectType>
@@ -88,6 +94,14 @@
 		<PropertyGroup Condition="'$(Cfg_2)'!=''">
 			<Defines>NDEBUG;$(Defines)</Defines>
 			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<UsePackages>false</UsePackages>
+			<UsingDelphiRTL>false</UsingDelphiRTL>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<DynamicRTL>false</DynamicRTL>
+			<LinkPackageImports>rtl.bpi;fmx.bpi</LinkPackageImports>
 		</PropertyGroup>
 		<ItemGroup>
 			<CppCompile Include="Form_Main.cpp">
