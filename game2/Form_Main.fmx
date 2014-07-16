@@ -1,0 +1,66 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'TDOHacker Wargame 2'
+  ClientHeight = 166
+  ClientWidth = 515
+  Visible = False
+  StyleLookup = 'backgroundstyle'
+  object Button1: TButton
+    Enabled = False
+    Position.Point = '(16,16)'
+    Width = 80.000000000000000000
+    Height = 80.000000000000000000
+    OnClick = Button1Click
+    TabOrder = 9
+    Text = #21098#20992
+  end
+  object Button2: TButton
+    Enabled = False
+    Position.Point = '(112,16)'
+    Width = 80.000000000000000000
+    Height = 80.000000000000000000
+    OnClick = Button2Click
+    TabOrder = 10
+    Text = #30707#38957
+  end
+  object Button3: TButton
+    Enabled = False
+    Position.Point = '(208,16)'
+    Width = 80.000000000000000000
+    Height = 80.000000000000000000
+    OnClick = Button3Click
+    TabOrder = 11
+    Text = #24067
+  end
+  object Button4: TButton
+    Position.Point = '(416,16)'
+    Width = 80.000000000000000000
+    Height = 80.000000000000000000
+    OnClick = Button4Click
+    TabOrder = 12
+    Text = 'Reset'
+  end
+  object Label1: TLabel
+    Position.Point = '(16,112)'
+    Width = 81.000000000000000000
+    Height = 33.000000000000000000
+    TabOrder = 13
+    Font.Size = 20.000000000000000000
+    Text = '0 - 0'
+  end
+  object Label2: TLabel
+    Position.Point = '(136,112)'
+    Width = 41.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 16
+    Font.Size = 16.000000000000000000
+    Text = '----'
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 336
+    Top = 48
+  end
+end
