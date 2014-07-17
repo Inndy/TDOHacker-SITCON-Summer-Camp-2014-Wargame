@@ -3,7 +3,7 @@
 	if (!file_exists($_GET['read'])) {
 		header("Location: ./?read=notice.txt");
 		exit;
-	} else if (dir(realpath($_GET['read'])) != dir(realpath(__FILE__))) {
+	} else if (dirname(realpath($_GET['read'])) != dirname(realpath(__FILE__))) {
 		header("Location: ./?read=notice.txt");
 		exit;
 	}
